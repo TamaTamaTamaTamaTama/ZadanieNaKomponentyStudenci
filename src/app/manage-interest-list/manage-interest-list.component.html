@@ -1,0 +1,9 @@
+<div>Interests:
+    <ul>
+        @for (interest of interestList; track $index) {
+        <li [class.selected]="$index===selected" (click)="selectInChild($index)">
+            {{interest}}
+        </li>
+    }
+    </ul>
+</div>

@@ -1,0 +1,40 @@
+<div>
+
+
+
+
+
+    <p>{{ 'Capital letters in a sentence' | titlecase }} </p>
+    <p>{{ 'Capital letters in a sentence' | myPipe }} </p>
+    <p>{{ 1.23456789 | number }} </p>
+    <p>{{ 1.23456789 | number :'1.1-5':'pl-PL'}} </p>
+    <p>{{ 1.23456789 | number :'1.1-5'}} </p>
+    <p>{{ 1.23 | currency }} </p>
+    <p>{{ 1.23 | currency: 'EUR': 'symbol' }} </p>
+    <p>{{ 1.23 | currency: 'PLN':'zł' }} </p>
+    <div>{{ dateOfBirth | plDate }}</div>
+<div>{{ dateOfBirth | date:'medium' }} </div>
+<div>{{ dateOfBirth | date:'shortTime' }}</div>
+<div>{{ dateOfBirth | date:'hh:mm:ss' }} </div>
+<div>{{2|i18nPlural:messageMapping}}</div>
+<div>{{interests|filterData:''}}</div>
+<div>{{0|i18nPlural:studentcount}}</div>
+<div>{{1|i18nPlural:studentcount}}</div>
+<div>{{2|i18nPlural:studentcount}}</div>
+<div>{{17|i18nPlural:studentcount}}</div>
+</div>
+
+<div class="all">
+    <h2>Mrs</h2>
+    <h3>{{name}} {{surname}}</h3>
+    <app-show-date [dateToShow]="dateOfBirth" title="Date of birth: " className="birthdate" format="yyyy-mm-dd"></app-show-date>
+    <app-manage-interest-list [interestList]="interests" [selected]="selected" (selectInParent)="select($event)"></app-manage-interest-list>
+    @if (selected>-1) {
+        <p>Modify interest:</p>
+        <app-edit-interest-data [interest]="interests[selected]" (saveInterest)="saveChangedInterest($event)"></app-edit-interest-data>
+        <!-- <button (click)="selected=-1">Save</button> -->
+    }
+</div>
+
+
+

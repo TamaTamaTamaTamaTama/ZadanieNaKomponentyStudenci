@@ -1,0 +1,30 @@
+/* HeroesComponent's private CSS styles */
+.all{
+    border: solid blue 1px;
+    background-color: lightblue;
+    border-radius:16px;
+    padding: 50px;
+    width: 30%;
+}
+h2 {
+    font-family: "Sofia";
+    font-size: 32px;
+  }
+  h3{
+    background-color:#405061;
+    color: white;
+    font-size: x-large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 2em;
+    padding-left: 5%;
+  }
+  .birthdate {
+    font-size: medium;
+    font-family: "Sofia";
+  }
+
+  .selected{
+    background-color: lightgoldenrodyellow;
+  }
+
+  
